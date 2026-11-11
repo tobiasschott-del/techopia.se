@@ -1,0 +1,236 @@
+/* Fonts (self-hosted, SIL Open Font License) */
+@font-face { font-family: "Familjen Grotesk"; font-weight: 400; font-style: normal; font-display: swap;
+  src: url("fonts/familjen-grotesk-latin-400-normal.woff2") format("woff2"); }
+@font-face { font-family: "Familjen Grotesk"; font-weight: 600; font-style: normal; font-display: swap;
+  src: url("fonts/familjen-grotesk-latin-600-normal.woff2") format("woff2"); }
+@font-face { font-family: "Familjen Grotesk"; font-weight: 700; font-style: normal; font-display: swap;
+  src: url("fonts/familjen-grotesk-latin-700-normal.woff2") format("woff2"); }
+@font-face { font-family: "Source Serif 4"; font-weight: 400; font-style: normal; font-display: swap;
+  src: url("fonts/source-serif-4-latin-400-normal.woff2") format("woff2"); }
+@font-face { font-family: "Source Serif 4"; font-weight: 400; font-style: italic; font-display: swap;
+  src: url("fonts/source-serif-4-latin-400-italic.woff2") format("woff2"); }
+@font-face { font-family: "Source Serif 4"; font-weight: 600; font-style: normal; font-display: swap;
+  src: url("fonts/source-serif-4-latin-600-normal.woff2") format("woff2"); }
+
+:root {
+  --paper: #E8EBEE;
+  --ink: #0E1A2B;
+  --steel: #4A586A;
+  --line: #BFC6CF;
+  --signal: #2438E0;
+  --sans: "Familjen Grotesk", system-ui, sans-serif;
+  --serif: "Source Serif 4", Georgia, serif;
+  --pad: clamp(1.25rem, 4vw, 3rem);
+  --max: 76rem;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 5rem; }
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--serif);
+  font-size: 1.125rem;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+h1, h2, h3, dt, nav, .button, .wordmark, figcaption, .foot { font-family: var(--sans); }
+p, dd { margin: 0; }
+
+a { color: var(--signal); text-underline-offset: .2em; }
+a:focus-visible, .button:focus-visible {
+  outline: 3px solid var(--signal);
+  outline-offset: 3px;
+}
+
+.skip {
+  position: absolute; left: var(--pad); top: -4rem;
+  background: var(--ink); color: var(--paper);
+  padding: .6rem 1rem; z-index: 10;
+}
+.skip:focus { top: .75rem; }
+
+/* Header */
+.top {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 1.5rem var(--pad);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+.wordmark {
+  display: inline-flex; align-items: center; gap: .65rem;
+  color: var(--ink); text-decoration: none;
+  font-weight: 700; font-size: 1.35rem; letter-spacing: -.01em;
+}
+.top nav { display: flex; gap: 1.75rem; flex-wrap: wrap; font-size: 1rem; }
+.top nav a { color: var(--ink); text-decoration: none; }
+.top nav a:hover { text-decoration: underline; text-underline-offset: .3em; }
+
+/* Hero */
+.hero {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: clamp(2.5rem, 7vw, 6rem) var(--pad) clamp(3.5rem, 8vw, 7rem);
+  display: grid;
+  grid-template-columns: minmax(0, 7fr) minmax(0, 5fr);
+  gap: clamp(2rem, 5vw, 5rem);
+  align-items: end;
+}
+.hero h1 {
+  margin: 0;
+  font-weight: 700;
+  font-size: clamp(3.1rem, 8.4vw, 7.25rem);
+  line-height: .95;
+  letter-spacing: -.035em;
+  text-wrap: balance;
+}
+.lead {
+  margin-top: 1.75rem;
+  max-width: 34rem;
+  font-size: clamp(1.2rem, 2vw, 1.45rem);
+  line-height: 1.5;
+  color: var(--steel);
+}
+.hero-actions { margin-top: 2rem; }
+
+.button {
+  display: inline-block;
+  background: var(--ink);
+  color: var(--paper);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.05rem;
+  padding: .9rem 1.4rem;
+  border-radius: 2px;
+}
+.button:hover { background: var(--signal); }
+
+/* The search brief: the memorable moment */
+.brief {
+  margin: 0;
+  background: #F6F7F9;
+  border: 1px solid var(--line);
+  border-radius: 2px;
+  padding: 1.5rem 1.5rem 1rem;
+}
+.brief figcaption {
+  font-size: .95rem;
+  color: var(--steel);
+  padding-bottom: .9rem;
+  border-bottom: 1px solid var(--ink);
+}
+.brief dl { margin: 0; }
+.brief dl > div {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: .15rem;
+  padding: .9rem 0;
+  border-bottom: 1px solid var(--line);
+}
+.brief dl > div:last-child { border-bottom: 0; }
+.brief dt { font-size: .9rem; color: var(--steel); }
+.brief dd { font-family: var(--sans); font-weight: 600; font-size: 1.2rem; line-height: 1.3; }
+
+.redacted {
+  display: inline-block;
+  width: var(--w, 8ch);
+  height: 1.05em;
+  vertical-align: -.12em;
+  background: var(--ink);
+  animation: redact .55s cubic-bezier(.7, 0, .2, 1) var(--d, 0s) both;
+}
+@keyframes redact {
+  from { clip-path: inset(0 100% 0 0); }
+  to   { clip-path: inset(0 0 0 0); }
+}
+
+/* Sections */
+.band {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: clamp(2.5rem, 5vw, 4rem) var(--pad);
+  border-top: 1px solid var(--ink);
+  display: grid;
+  grid-template-columns: minmax(0, 4fr) minmax(0, 8fr);
+  gap: clamp(1.5rem, 4vw, 4rem);
+}
+.band h2 {
+  margin: 0;
+  font-weight: 700;
+  font-size: clamp(1.6rem, 2.6vw, 2.15rem);
+  line-height: 1.1;
+  letter-spacing: -.02em;
+  text-wrap: balance;
+}
+.band-body { max-width: 40rem; }
+.band-body > * + * { margin-top: 1.5rem; }
+.intro { font-size: 1.3rem; line-height: 1.5; }
+
+.areas { margin: 2rem 0 0; border-top: 1px solid var(--line); }
+.areas > div {
+  display: grid;
+  grid-template-columns: minmax(0, 5fr) minmax(0, 6fr);
+  gap: 1.5rem;
+  padding: 1.1rem 0;
+  border-bottom: 1px solid var(--line);
+}
+.areas dt { font-weight: 600; font-size: 1.1rem; line-height: 1.3; }
+.areas dd { color: var(--steel); font-size: 1rem; line-height: 1.5; }
+
+/* Process: a real sequence, so it is numbered */
+.steps { list-style: none; margin: 0; padding: 0; counter-reset: step; }
+.steps li {
+  counter-increment: step;
+  display: grid;
+  grid-template-columns: 2.25rem minmax(0, 1fr);
+  column-gap: 1rem;
+  padding: 1.1rem 0;
+  border-bottom: 1px solid var(--line);
+}
+.steps li:first-child { border-top: 1px solid var(--line); }
+.steps li::before {
+  content: counter(step);
+  grid-row: span 2;
+  font-family: var(--sans);
+  font-weight: 700;
+  font-size: 1.5rem;
+  line-height: 1.2;
+}
+.steps h3 { margin: 0; font-size: 1.15rem; line-height: 1.3; }
+.steps p { color: var(--steel); font-size: 1rem; margin-top: .25rem; }
+.note { font-style: italic; color: var(--steel); font-size: 1rem; }
+
+/* Contact */
+.contact-links { display: flex; align-items: center; gap: 1.75rem; flex-wrap: wrap; }
+.plain { font-family: var(--sans); font-weight: 600; }
+
+/* Footer */
+.foot {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 2rem var(--pad) 3rem;
+  border-top: 1px solid var(--ink);
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+  font-size: .95rem;
+  color: var(--steel);
+}
+
+/* Small screens */
+@media (max-width: 52rem) {
+  .hero { grid-template-columns: 1fr; align-items: start; }
+  .band { grid-template-columns: 1fr; }
+  .areas > div { grid-template-columns: 1fr; gap: .25rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .redacted { animation: none; }
+}
