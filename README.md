@@ -8,7 +8,7 @@ Plain static site. No build step, no dependencies.
 
 - `index.html` – the page
 - `assets/style.css` – styles
-- `assets/fonts/` – self-hosted Familjen Grotesk and Instrument Serif (SIL Open Font License)
+- `assets/fonts/` – self-hosted Familjen Grotesk and Playfair Display (SIL Open Font License)
 - `assets/hero.jpg` – hero photo (check the licence before publishing)
 - `assets/logo.svg` – logo (The Thinker in front of a globe, vector style), also used as favicon
 
