@@ -21,5 +21,4 @@ Then open http://localhost:8000.
 
 ## To fill in before launch
 
-- Contact email in `index.html` (currently `hello@techopia.se`)
-- LinkedIn profile link in `index.html`
+- LinkedIn profile link (not on the page yet)
