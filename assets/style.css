@@ -81,14 +81,12 @@ a:focus-visible, .button:focus-visible {
   margin: 0 auto;
   padding: clamp(2.5rem, 7vw, 6rem) var(--pad) clamp(3.5rem, 8vw, 7rem);
   display: grid;
-  grid-template-columns: minmax(0, 7fr) minmax(0, 5fr);
-  gap: clamp(2rem, 5vw, 5rem);
-  align-items: end;
+  grid-template-columns: minmax(0, 1fr);
 }
 .hero h1 {
   margin: 0;
   font-weight: 700;
-  font-size: clamp(2.5rem, 5.6vw, 5rem);
+  font-size: clamp(2.5rem, 6.4vw, 5.75rem);
   line-height: 1;
   letter-spacing: -.03em;
   text-wrap: balance;
@@ -113,46 +111,6 @@ a:focus-visible, .button:focus-visible {
   border-radius: 2px;
 }
 .button:hover { background: var(--ink); }
-
-/* The search brief: the memorable moment */
-.brief {
-  margin: 0;
-  background: var(--surface);
-  border: 1px solid var(--line);
-  border-radius: 2px;
-  padding: 1.5rem 1.5rem 1rem;
-}
-.brief figcaption {
-  font-size: .95rem;
-  color: var(--steel);
-  padding-bottom: .9rem;
-  border-bottom: 3px solid transparent;
-  border-image: var(--spectrum) 1;
-}
-.brief dl { margin: 0; }
-.brief dl > div {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: .15rem;
-  padding: .9rem 0;
-  border-bottom: 1px solid var(--line);
-}
-.brief dl > div:last-child { border-bottom: 0; }
-.brief dt { font-size: .9rem; color: var(--steel); }
-.brief dd { font-family: var(--sans); font-weight: 600; font-size: 1.2rem; line-height: 1.3; }
-
-.redacted {
-  display: inline-block;
-  width: var(--w, 8ch);
-  height: 1.05em;
-  vertical-align: -.12em;
-  background: var(--spectrum);
-  animation: redact .55s cubic-bezier(.7, 0, .2, 1) var(--d, 0s) both;
-}
-@keyframes redact {
-  from { clip-path: inset(0 100% 0 0); }
-  to   { clip-path: inset(0 0 0 0); }
-}
 
 /* Sections */
 .band {
@@ -284,7 +242,6 @@ a:focus-visible, .button:focus-visible {
 
 /* Small screens */
 @media (max-width: 52rem) {
-  .hero { grid-template-columns: 1fr; align-items: start; }
   .band { grid-template-columns: 1fr; }
   .areas > div { grid-template-columns: 1fr; gap: .25rem; }
   .models { grid-template-columns: 1fr; }
@@ -293,5 +250,4 @@ a:focus-visible, .button:focus-visible {
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
-  .redacted { animation: none; }
 }
