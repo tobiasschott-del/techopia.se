@@ -149,12 +149,12 @@ a:focus-visible { outline: 3px solid var(--ink); outline-offset: 3px; border-rad
 .offer-head h2 { font-size: clamp(1.8rem, 3vw, 2.4rem); line-height: 1.15; }
 .offer-head p { margin-top: .75rem; color: var(--steel); }
 .offer-row {
-  max-width: var(--max);
+  max-width: 52rem;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
 }
-.offer-row li { padding: .25rem clamp(1rem, 2vw, 1.75rem); text-align: center; }
+.offer-row li { padding: .25rem clamp(1.25rem, 3vw, 2.5rem); text-align: center; }
 .offer-row li + li { border-left: 1px solid var(--line); }
 .icon { fill: none; stroke: var(--ink); stroke-width: 1.4; stroke-linecap: round; stroke-linejoin: round; }
 .offer-row h3 { margin-top: 1rem; font-family: var(--serif); font-weight: 400; font-size: 1.35rem; line-height: 1.25; }
