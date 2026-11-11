@@ -88,9 +88,9 @@ a:focus-visible, .button:focus-visible {
 .hero h1 {
   margin: 0;
   font-weight: 700;
-  font-size: clamp(3.1rem, 8.4vw, 7.25rem);
-  line-height: .95;
-  letter-spacing: -.035em;
+  font-size: clamp(2.5rem, 5.6vw, 5rem);
+  line-height: 1;
+  letter-spacing: -.03em;
   text-wrap: balance;
 }
 .lead {
