@@ -1,6 +1,6 @@
 # techopia.se
 
-Website for Techopia, a headhunting and executive search agency for tech.
+Website for Techopia, a talent company for leaders and key people in emerging tech.
 
 Plain static site. No build step, no dependencies.
 
