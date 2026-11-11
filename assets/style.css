@@ -187,11 +187,27 @@ a:focus-visible, .button:focus-visible {
 .areas dt { font-weight: 600; font-size: 1.1rem; line-height: 1.3; }
 .areas dd { color: var(--steel); font-size: 1rem; line-height: 1.5; }
 
-/* Ways to work */
-.models { list-style: none; margin: 2rem 0 0; padding: 0; border-top: 1px solid var(--line); }
-.models li { padding: 1.25rem 0; border-bottom: 1px solid var(--line); }
-.models h3 { margin: 0; font-size: 1.2rem; line-height: 1.3; }
-.models p { color: var(--steel); font-size: 1.02rem; line-height: 1.55; margin-top: .4rem; }
+/* Ways to work: three boxes side by side */
+.band-wide { grid-template-columns: 1fr; row-gap: 1rem; }
+.band-wide .band-body { max-width: none; }
+.band-wide .intro { max-width: 40rem; }
+.models {
+  list-style: none;
+  margin: 2rem 0 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.25rem;
+}
+.models li {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-top: 3px solid var(--signal);
+  border-radius: 2px;
+  padding: 1.5rem 1.4rem 1.6rem;
+}
+.models h3 { margin: 0; font-size: 1.3rem; line-height: 1.25; letter-spacing: -.01em; }
+.models p { color: var(--steel); font-size: 1.02rem; line-height: 1.55; margin-top: .75rem; }
 
 /* Clients */
 .clients {
@@ -261,6 +277,7 @@ a:focus-visible, .button:focus-visible {
   .hero { grid-template-columns: 1fr; align-items: start; }
   .band { grid-template-columns: 1fr; }
   .areas > div { grid-template-columns: 1fr; gap: .25rem; }
+  .models { grid-template-columns: 1fr; }
 }
 
 @media (prefers-reduced-motion: reduce) {

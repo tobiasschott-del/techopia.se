@@ -1,6 +1,6 @@
 # techopia.se
 
-Website for Techopia, a talent company for leaders and key people in emerging tech.
+Website for Techopia, a company providing key competencies in emerging tech.
 
 Plain static site. No build step, no dependencies.
 
