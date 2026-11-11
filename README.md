@@ -1,6 +1,6 @@
 # techopia.se
 
-Website for Techopia, a company that finds key hires in emerging tech.
+Website for Techopia, a company that finds key hirings in emerging tech.
 
 Plain static site. No build step, no dependencies.
 
