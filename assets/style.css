@@ -81,12 +81,16 @@ a:focus-visible, .button:focus-visible {
   margin: 0 auto;
   padding: clamp(2.5rem, 7vw, 6rem) var(--pad) clamp(3.5rem, 8vw, 7rem);
   display: grid;
-  grid-template-columns: minmax(0, 1fr);
+  grid-template-columns: minmax(0, 1fr) minmax(0, 35rem);
+  gap: clamp(2rem, 5vw, 4.5rem);
+  align-items: center;
 }
+.hero-photo { margin: 0; }
+.hero-photo img { display: block; width: 100%; height: auto; border-radius: 2px; }
 .hero h1 {
   margin: 0;
   font-weight: 700;
-  font-size: clamp(2.5rem, 6.4vw, 5.75rem);
+  font-size: clamp(2.5rem, 4.9vw, 4.5rem);
   line-height: 1;
   letter-spacing: -.03em;
   text-wrap: balance;
@@ -242,6 +246,7 @@ a:focus-visible, .button:focus-visible {
 
 /* Small screens */
 @media (max-width: 52rem) {
+  .hero { grid-template-columns: 1fr; align-items: start; }
   .band { grid-template-columns: 1fr; }
   .areas > div { grid-template-columns: 1fr; gap: .25rem; }
   .models { grid-template-columns: 1fr; }
