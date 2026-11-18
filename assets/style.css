@@ -190,7 +190,7 @@ a:focus-visible { outline: 2px solid var(--lilac); outline-offset: 3px; border-r
 .offer-head h2 { font-size: clamp(1.8rem, 3vw, 2.4rem); line-height: 1.15; }
 .offer-head p { margin-top: .75rem; }
 .offer-row {
-  max-width: 52rem;
+  max-width: 58rem;
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
