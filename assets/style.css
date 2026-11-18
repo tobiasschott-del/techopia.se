@@ -115,9 +115,7 @@ a:focus-visible { outline: 2px solid var(--lilac); outline-offset: 3px; border-r
   background: var(--irid);
   opacity: .5;
 }
-.eyebrow { font-size: .98rem; color: var(--gold); letter-spacing: .02em; }
 .hero h1 {
-  margin-top: 1.25rem;
   max-width: 14ch;
   font-size: clamp(2.5rem, 4.8vw, 4.3rem);
   line-height: 1.08;
