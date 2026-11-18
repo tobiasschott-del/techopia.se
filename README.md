@@ -1,15 +1,14 @@
 # techopia.se
 
-Website for Techopia, a company that finds key hires in emerging tech.
+Website for Techopia, a discreet headhunting and executive search firm for emerging tech.
 
 Plain static site. No build step, no dependencies.
 
 ## Structure
 
 - `index.html` – the page
-- `assets/style.css` – styles
+- `assets/style.css` – styles (dark palette; the hero light streak is inline SVG in `index.html`)
 - `assets/fonts/` – self-hosted Familjen Grotesk and Playfair Display (SIL Open Font License)
-- `assets/hero.jpg` – hero photo (check the licence before publishing)
 - `assets/logo.svg` – logo (The Thinker in front of a globe, vector style), also used as favicon
 
 ## Run locally
