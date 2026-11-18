@@ -149,7 +149,7 @@ a:focus-visible { outline: 2px solid var(--lilac); outline-offset: 3px; border-r
   margin: 0 auto;
   padding: clamp(3.5rem, 7vw, 6rem) var(--pad);
 }
-.creed-head { max-width: 38rem; }
+.creed-head { max-width: 44rem; }
 .creed-head h2 { font-size: clamp(2rem, 3.4vw, 2.8rem); line-height: 1.12; }
 .creed-head p { margin-top: 1rem; font-size: 1.15rem; line-height: 1.55; }
 .creed-list {
@@ -162,6 +162,8 @@ a:focus-visible { outline: 2px solid var(--lilac); outline-offset: 3px; border-r
 .creed-list li + li { padding-left: clamp(1rem, 2.5vw, 2.25rem); border-left: 1px solid var(--line); }
 .creed-list h3 { font-family: var(--serif); font-weight: 400; font-size: 1.5rem; line-height: 1.2; }
 .creed-list p { margin-top: .6rem; font-size: 1rem; line-height: 1.55; }
+
+.creed-note { margin-top: 2rem; font-family: var(--serif); font-style: italic; font-size: 1.05rem; line-height: 1.5; max-width: 40rem; }
 
 /* Bands */
 .band {
