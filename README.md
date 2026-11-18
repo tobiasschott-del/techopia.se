@@ -1,6 +1,6 @@
 # techopia.se
 
-Website for Techopia, a discreet headhunting and executive search firm for emerging tech.
+Website for Techopia, an executive search firm specialised in confidential hiring for emerging tech.
 
 Plain static site. No build step, no dependencies.
 
